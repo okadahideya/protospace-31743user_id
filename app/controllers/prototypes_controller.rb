@@ -1,7 +1,5 @@
 class PrototypesController < ApplicationController
-  before_action :authenticate_user!, only: [:index]
 
-  
   def index
     query = "SELECT * FROM prototypes"
     @prototype = Prototype.find_by_sql(query)
